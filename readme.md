@@ -10,4 +10,4 @@ To solve from 100 to 500 problems
 
 ### Progress
 
-![](https://progress-bar.dev/8/?scale=500&title=problems&width=360&color=babaca&suffix=)
+![](https://progress-bar.dev/9/?scale=500&title=problems&width=360&color=babaca&suffix=)
