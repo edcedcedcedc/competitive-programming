@@ -17,6 +17,7 @@
 goal: return yes if string is diverse or not otherwise
 
 diverse - contains consecutive adjacent letters and each occurs exactly once
+contiguous segment - should come on after another and no duplicates 
 
 input 1 <= n <= 100 inclusive, 
 first n - number of strings, 
@@ -33,7 +34,7 @@ abs 0 - 1 = 1
 abs 1 - 1 = 0
 abs 1 - 2 = 1
 
-
+I have to better read and understand the task before doing it i.e goal 
 """
 
 import string
