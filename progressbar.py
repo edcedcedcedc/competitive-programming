@@ -28,7 +28,7 @@ strategy:
     abstract part of saturated bar 10 * 10 * 54 / 100
     0.1 from 54 are max saturated so 5
     5 as satured again * k  50
-    54 - 50 = 4 of any saturation  
+    54 - 50 = 4 of any saturation 
 
 """
 import math 
