@@ -36,10 +36,10 @@ import math
 n,k,t = map(int, input().split())
 a = list()
 
-total_saturation = math.floor((n * k * t)/100)
+total_saturation = math.floor(n * k * t/100)
 max_saturated = math.floor(total_saturation/k)
 any_saturated = max_saturated + 1
-any_saturation = total_saturation - (max_saturated * k)
+any_saturation = total_saturation - max_saturated * k
 
 for i in range(1,n+1):
     if i <= max_saturated:
