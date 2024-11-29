@@ -4,7 +4,7 @@ import math
 
 #k,k+1,k+2,k+3..k+n-1
 #1,2,3,4          a_i = a + (i - 1)d
-#1+2+3+4          S_n = 2*k+(n - 1)d/2 or n(n + 1)/2
+#1+2+3+4          S_n = n * (2*k+(n - 1)d)/2 or n(n + 1)/2
 #1^2+2^2+3^2      S_n = n(n + 1)(2n + 1)/6
 
 #geometric series
@@ -72,42 +72,39 @@ import math
 # | |____| |__| | | \ \| |__| | |__| | |__| | |____| |____ / ____ \| | \ \| |____| |___| |__| | |_) |
 # |______|\____/|_|  \_\\____/|_____/ \____/|______|______/_/    \_\_|  \_\\_____|______\____/|____/ 
 
+
+
 """ 
-goal/understanding:
-3 cases 
-a > b = 1
-a < b = -1
-a == b = 0
 
-4 possibilities by pairs 2 by 2 
-a b c d 
+i * k for the i-th banana 
 
-a c  b d
-b d  a c 
-a d  c b
-c b  a d 
+#3 * 1 + 3 * 2 + 3 * 3 + 3 * 4
 
-for each test case brute force 
+1*k + 2*k + 3*k + ...+i*k
+
+k1 + k2 + k3 + ki = k (1 + 2 + 3 + i)
+
+4 = 1 + 2 + 3  + 4
+ 
+#1+2+3+4          
+# S_n = n * 2*k+(n - 1)d
+
+
+
+d > n
+d < n
+d = n 
 
  """
-def f(a, b):
-    if (a > b): return 1
-    if (a == b): return 0
-    if (a < b): return -1
-for _ in range(int(input())):
-    a, b, c, d = map(int, input().split())
-    ans = 0
-    if f(a, c) + f(b, d) > 0:
-        ans += 1
-    if f(a, d) + f(b, c) > 0:
-        ans += 1
-    if f(b, c) + f(a, d) > 0:
-        ans += 1
-    if f(b, d) + f(a, c) > 0:
-        ans += 1
-    print(ans)
+k, n, w = map(int, input().split())
+b = 0
+d = k * sum(range(0,w + 1))
+
+if d > n:
+    b = d - n
+    print(b)
+else:
+    print(b)
 
 
-
-    
 

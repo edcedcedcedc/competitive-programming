@@ -72,42 +72,32 @@ import math
 # | |____| |__| | | \ \| |__| | |__| | |__| | |____| |____ / ____ \| | \ \| |____| |___| |__| | |_) |
 # |______|\____/|_|  \_\\____/|_____/ \____/|______|______/_/    \_\_|  \_\\_____|______\____/|____/ 
 
+
+
 """ 
-goal/understanding:
-3 cases 
-a > b = 1
-a < b = -1
-a == b = 0
+even always positive 
+odd always negative 
 
-4 possibilities by pairs 2 by 2 
-a b c d 
+by induction the two smallest possible true values to get the identity 
+even ?
+n //2 
+n - 1//2 - n 
 
-a c  b d
-b d  a c 
-a d  c b
-c b  a d 
+-1 ->
 
-for each test case brute force 
+1 - 1 // 2 - 1 = -1
+
+2 ->
+
+2 //2 = 1
+
 
  """
-def f(a, b):
-    if (a > b): return 1
-    if (a == b): return 0
-    if (a < b): return -1
-for _ in range(int(input())):
-    a, b, c, d = map(int, input().split())
-    ans = 0
-    if f(a, c) + f(b, d) > 0:
-        ans += 1
-    if f(a, d) + f(b, c) > 0:
-        ans += 1
-    if f(b, c) + f(a, d) > 0:
-        ans += 1
-    if f(b, d) + f(a, c) > 0:
-        ans += 1
-    print(ans)
 
 
+n = int(input())
 
-    
-
+if n % 2 == 0:
+	print(n // 2)
+else:
+	print((n-1)//2 - n)

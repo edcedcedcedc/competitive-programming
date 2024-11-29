@@ -72,42 +72,50 @@ import math
 # | |____| |__| | | \ \| |__| | |__| | |__| | |____| |____ / ____ \| | \ \| |____| |___| |__| | |_) |
 # |______|\____/|_|  \_\\____/|_____/ \____/|______|______/_/    \_\_|  \_\\_____|______\____/|____/ 
 
+
+
 """ 
-goal/understanding:
-3 cases 
-a > b = 1
-a < b = -1
-a == b = 0
+k - showel price 
+r - 1 <= r <= 9 
+t - unlimited 10
+i - 1 <= i <= inf
 
-4 possibilities by pairs 2 by 2 
-a b c d 
 
-a c  b d
-b d  a c 
-a d  c b
-c b  a d 
+117 - k, r = 3, i - ?
 
-for each test case brute force 
+117 * 1 = 117
+117 * 2 = 234
+117 * 3 = 351
+117 * 4 = 468
+117 * 5 = 585
+117 * 6 = 702
+117 * 7 = 819
+117 * 8 = 936
+117 * 9 = 1053 case 2 117 * x = y
+117 * 10 = 1070 case 3
+117 * 11 = 1287
+
+117 * x = y - r
+
+117 * x mod 10 = r
+
+
+
+
+113 7 = 9
+
+237 7 = 1
+
+15 2 = 2
+
+
 
  """
-def f(a, b):
-    if (a > b): return 1
-    if (a == b): return 0
-    if (a < b): return -1
-for _ in range(int(input())):
-    a, b, c, d = map(int, input().split())
-    ans = 0
-    if f(a, c) + f(b, d) > 0:
-        ans += 1
-    if f(a, d) + f(b, c) > 0:
-        ans += 1
-    if f(b, c) + f(a, d) > 0:
-        ans += 1
-    if f(b, d) + f(a, c) > 0:
-        ans += 1
-    print(ans)
 
 
+k, r = map(int, input().split()); i = 1
+while 0 != k * i % 10 != r: 
+    i += 1
+print(i)
 
-    
 

@@ -1,5 +1,10 @@
 import math
 
+###################### CONTACT ME ####################### 
+# EMAIL: ranogaet@gmail.com or TELEGRAM: @eurodollarclub
+# For antispam write this in the title or first message: edc
+#########################################################
+
 #arithmetic series
 
 #k,k+1,k+2,k+3..k+n-1
@@ -54,8 +59,6 @@ import math
 #bisection
 #lo,hi,mid,while lo hi, condition, lo/hi mid + 1/mid - 1
 
-
-
 #understanding:
 #1)goal,what I know, what I dont know, 
 #2)observation/breakdown/induce/deduce
@@ -65,49 +68,22 @@ import math
 #implimentation
 #evaluation
 
-# ______ _    _ _____   ____  _____   ____  _      _               _____   _____ _     _    _ ____  
+
+###______ _    _ _____   ____  _____   ____  _      _               _____   _____ _     _    _ ____  
 # |  ____| |  | |  __ \ / __ \|  __ \ / __ \| |    | |        /\   |  __ \ / ____| |   | |  | |  _ \ 
 # | |__  | |  | | |__) | |  | | |  | | |  | | |    | |       /  \  | |__) | |    | |   | |  | | |_) |
 # |  __| | |  | |  _  /| |  | | |  | | |  | | |    | |      / /\ \ |  _  /| |    | |   | |  | |  _ < 
 # | |____| |__| | | \ \| |__| | |__| | |__| | |____| |____ / ____ \| | \ \| |____| |___| |__| | |_) |
 # |______|\____/|_|  \_\\____/|_____/ \____/|______|______/_/    \_\_|  \_\\_____|______\____/|____/ 
-
-""" 
-goal/understanding:
-3 cases 
-a > b = 1
-a < b = -1
-a == b = 0
-
-4 possibilities by pairs 2 by 2 
-a b c d 
-
-a c  b d
-b d  a c 
-a d  c b
-c b  a d 
-
-for each test case brute force 
-
- """
-def f(a, b):
-    if (a > b): return 1
-    if (a == b): return 0
-    if (a < b): return -1
-for _ in range(int(input())):
-    a, b, c, d = map(int, input().split())
-    ans = 0
-    if f(a, c) + f(b, d) > 0:
-        ans += 1
-    if f(a, d) + f(b, c) > 0:
-        ans += 1
-    if f(b, c) + f(a, d) > 0:
-        ans += 1
-    if f(b, d) + f(a, c) > 0:
-        ans += 1
-    print(ans)
+###
 
 
 
-    
-
+t = int(input())
+for _ in range(t):
+    a,b,n = map(int, input().split()); i = 1
+    while a < n:
+        i += 1 
+        a += b
+        print(a, b, i)
+    print(i)

@@ -72,42 +72,17 @@ import math
 # | |____| |__| | | \ \| |__| | |__| | |__| | |____| |____ / ____ \| | \ \| |____| |___| |__| | |_) |
 # |______|\____/|_|  \_\\____/|_____/ \____/|______|______/_/    \_\_|  \_\\_____|______\____/|____/ 
 
-""" 
-goal/understanding:
-3 cases 
-a > b = 1
-a < b = -1
-a == b = 0
-
-4 possibilities by pairs 2 by 2 
-a b c d 
-
-a c  b d
-b d  a c 
-a d  c b
-c b  a d 
-
-for each test case brute force 
-
- """
-def f(a, b):
-    if (a > b): return 1
-    if (a == b): return 0
-    if (a < b): return -1
-for _ in range(int(input())):
-    a, b, c, d = map(int, input().split())
-    ans = 0
-    if f(a, c) + f(b, d) > 0:
-        ans += 1
-    if f(a, d) + f(b, c) > 0:
-        ans += 1
-    if f(b, c) + f(a, d) > 0:
-        ans += 1
-    if f(b, d) + f(a, c) > 0:
-        ans += 1
-    print(ans)
+#implimentation brute force math
+#solve at least 300 low lvl accepts
+#read other problems after your problem
 
 
-
-    
-
+n, s, m = map(int, input().split())
+segs = [[0, 0], [m, m]] + [list(map(int, input().split())) for i in range(n)]
+segs.sort()
+print(segs)
+for i in range(1, n + 2):
+    if segs[i][0] - segs[i - 1][1] >= s:
+        print('YES')
+        break
+print('NO')

@@ -4,5 +4,3 @@ I will post my solutions and solving technique(thinking) to various problems fro
 ![Codeforces Logo](https://codeforces.org/s/18049/images/codeforces-logo-with-telegram.png)
 
 
-
-
