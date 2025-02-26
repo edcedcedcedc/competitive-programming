@@ -1,0 +1,2 @@
+math, dp, implimentation, brute force
+think no more than 15-20 minutes
