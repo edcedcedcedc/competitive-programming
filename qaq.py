@@ -1,5 +1,7 @@
       
 """ 
+understanding:
+number of "QAQ" substrings in any string, where QA can be separated from each other 
 
 strategy:
 count q's
