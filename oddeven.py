@@ -4,6 +4,10 @@ A. Even Odds
 """
 
 """ 
+
+
+understanding:
+------------------------------------------------
 def generator_odd(limit=10**12):
     i = 1
     while i <= limit:
@@ -35,37 +39,93 @@ for i in range(n):
             print(even_value)
             break
             
-
-
-strategy:
-
-
-(n + 1) // 2 
-
-1 2 3 4 5 6 7 8 9 10 11
-1   3   5   7        11
-
-some sort of induction if it works for 10 then shall work for everyting
-(10 + 1) // 2 -> 5
-1 3 5 7 11 
-
-each odd num increase by 2 each time starting at 1
-1 + (k - 1) * 2 = 2k - 1
-
-1 2 3 4 5
-1 + (3 - 1) * 2
+-----------------------------------------------------------------
 
 1 2 3 4 5 6 7 8 9 10
 
- """
+ 2 4 6 8 10 12 14 16 18 20
+1 3 5 7 9 11 13 15 17 19
 
+1 3 5 7 9 2 4 6 8 10
+
+then 
+
+from 20 numbers 
+
+10 even 
+10 odd 
+
+half of them 
+
+
+0 1 2 3 4 5 6 7 8 9 10
+
+10 / 2 = 5
+8 / 2 = 4
+7 / 2 = 3.5
+7 // 2 = 3
+
+
+
+
+
+any even number 
+
+2 * (k - half)
+
+any odd number 
+
+1 + (k - 1) * 2 for any k > 1
+
+k = 1 -> 1 + (1 - 1) * 2 = 1 
+k = 2 -> 1 + (2 - 1) * 2 = 3
+
+1 + (k - 1) * 2 = 1 + 2k - 2 = 2k - 1
+
+n = 10
+k = 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Strategy:
+
+Generator strategy
+Precompute and yield a huge sequence 
+find out the value k 
+
+Math strategy
+Compute n odds 
+If k <= odds 
+	print num odd
+Else 
+	print num even
+
+    
+
+ """
 
 n, k = map(int, input().split())
 
-odds = (n + 1) // 2
-print("odds", odds)
+m = (n + 1) // 2
 
-if k <= odds:
+
+if k <= m:
     print(2 * k - 1)
 else:
-    print(2 * (k - odds))
+    print(2 * (k - m))
