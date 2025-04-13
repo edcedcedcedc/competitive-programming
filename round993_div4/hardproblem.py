@@ -30,7 +30,7 @@ first solution
 """
 
 
-t = int(input())
+""" t = int(input())
 for i in range(t):
     m, a, b, c = list(map(int, input().split()))
     diff = 0
@@ -63,7 +63,7 @@ for i in range(t):
         r += m
 
     print(r)
-
+ """
 
 """ 
 generalization of the solution 
@@ -99,3 +99,38 @@ generalization of the solution
 
 if __name__ == "__main__":
     main() """
+
+
+t = int(input())
+for i in range(t):
+    m, a, b, c = list(map(int, input().split()))
+    diff = 0
+    r = 0
+
+    if m >= a:
+        r += a
+        if m - a >= 1:
+            diff = m - a
+            if diff >= c:
+                r += c
+                c = 0
+                diff = 0
+            else:
+                r += diff
+                c = c - diff
+                diff = 0
+    else:
+        r += m
+
+    if m >= b:
+        r += b
+        if m - b >= 1:
+            diff = m - b
+            if diff >= c:
+                r += c
+            else:
+                r += diff
+    else:
+        r += m
+
+    print(r)
