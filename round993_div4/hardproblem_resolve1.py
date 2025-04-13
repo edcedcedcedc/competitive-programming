@@ -9,9 +9,16 @@ for _ in range(int(input())):
     if m - b >= 1:
         r += min(c, m - b)
     print(r)
+
     """ 
+    example with positive m - a
     ---a
     ------m
        ---m - a
        ----c
+    example with negative m - a
+        ---a
+        --m
+       -m - a
+        --c
     """
