@@ -1,3 +1,8 @@
+"""
+
+solved in 2 hours 30 minutes
+"""
+
 for _ in range(int(input())):
     n = int(input())
     sn = set()
