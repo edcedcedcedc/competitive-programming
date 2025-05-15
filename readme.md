@@ -9,4 +9,7 @@ The document of solved problems and strategies applied.
 Total solved problems:<br>
 
 11/04/2025<br>
-67 max difficulty around 900-1000
+67 problems solved, max difficulty around 900-1000
+
+15/05/2025<br>
+82 problems solved, max difficulty around 900-1000
