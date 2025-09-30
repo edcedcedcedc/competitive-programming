@@ -1,0 +1,51 @@
+# in place
+m = 3
+n = 3
+nums1 = [1, 2, 3, 0, 0, 0]
+nums2 = [2, 5, 6]
+
+p1 = m - 1  # 2
+p2 = n - 1  # 2
+p = m + n - 1
+while p1 >= 0 and p2 >= 0:
+    if nums1[p1] > nums2[p2]:
+        nums1[p] = nums1[p1]
+        p1 = p1 - 1
+    else:
+        nums1[p] = nums2[p2]
+        p2 = p2 - 1
+    p = p - 1
+while p2 >= 0:
+    nums1[p] = nums2[p2]
+    p2 -= 1
+    p -= 1
+
+
+# not in place
+m = 3
+n = 3
+nums1 = [1, 2, 3, 0, 0, 0]
+nums2 = [2, 5, 6]
+
+
+nums1 = nums1[:m]
+nums1 = nums1 + nums2
+nums1.sort()
+print(nums1)
+
+
+# in place
+m = 3
+n = 3
+nums1 = [1, 2, 3, 0, 0, 0]
+nums2 = [2, 5, 6]
+nums1[:] = sorted(nums1[:m] + nums2)
+
+
+# in place
+m = 3
+n = 3
+nums1 = [1, 2, 3, 0, 0, 0]
+nums2 = [2, 5, 6]
+nums1[:] = nums1[:m] + nums2
+nums1.sort()
